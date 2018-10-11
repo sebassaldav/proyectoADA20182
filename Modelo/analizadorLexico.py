@@ -3,20 +3,17 @@ import sys
 
 keywords = {
     # METODOS PILA
-    'STACKS': 'STACKS',
     'PUSHS': 'PUSHS',
     'POPS': 'POPS',
     'EMPTYS': 'EMPTYS',
     'CLEARS': 'CLEARS',
 
     # METODOS COLA
-    'QUEUES': 'QUEUES',
     'ADDQ': 'ADDG',
     'POLLQ': 'POLLG',
     'REMOVEQ': 'REMOVEG',
 
-    # METODOS LISTA
-    'LISTS': 'LISTS',
+    # METODOS LIST
     'ADDL': 'ADDL',
     'SIZEL': 'SIZEL',
     'REMOVEL': 'REMOVEL',
@@ -30,6 +27,11 @@ keywords = {
     #ESTRUCTURAS
     'ARBOL': 'ARBOL',
     'GRAFO': 'GRAFO',
+    'STACKS': 'STACKS',
+    'QUEUES': 'QUEUES',
+    'LISTS': 'LISTS',
+    'MATRIZ': 'MATRIZ',
+    'VECTOR': 'VECTOR',
 
     # CICLOS
     'FOR': 'FOR',
@@ -62,10 +64,8 @@ keywords = {
     # TIPOS DE DATOS
     'INT': 'INT',
     'CHAR': 'CHAR',
-    'FLOAT': 'FLOAT',
     'DOUBLE': 'DOUBLE',
     'BOOLEAN': 'BOOLEAN',
-
     'BREAK': 'BREAK',
     'FALSE': 'FALSE',
     'TRUE': 'TRUE',
@@ -117,10 +117,16 @@ def t_nomvariable(t):
     #Sino la palabra reservada
     return t
 
+def t_INT(t):
+    r'\d+'
+    t.value = int(t.value)
+    return t
+
 def t_DOUBLE(t):
     r'\d+\.\d+'
     t.value = float(t.value)
     return t
+
 
 t_COMILLASIMPLE = r'\ '' '
 t_COMA = r'\ , '
