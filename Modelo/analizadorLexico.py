@@ -41,6 +41,7 @@ keywords = {
     'FOREACH': 'FOREACH',
     'ENDFOREACH': 'ENDFOREACH',
     'REPEAT': 'REPEAT',
+    'UNTIL': 'UNTIL',
     'WHILE': 'WHILE',
     'ENDWHILE': 'ENDWHILE',
 
@@ -70,7 +71,6 @@ keywords = {
     'TRUE': 'TRUE',
     'VAR': 'VAR',
     'THEN': 'THEN',
-    'UNTIL': 'UNTIL',
     'WHEN': 'WHEN',
     'BEGIN': 'BEGIN',
     'RAIZ': 'RAIZ',
