@@ -27,6 +27,10 @@ keywords = {
     'ENDIF': 'ENDIF',
     'CASE': 'CASE',
 
+    #ESTRUCTURAS
+    'ARBOL': 'ARBOL',
+    'GRAFO': 'GRAFO',
+
     # CICLOS
     'FOR': 'FOR',
     'TO': 'TO',
