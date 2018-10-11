@@ -122,7 +122,7 @@ def t_DOUBLE(t):
     t.value = float(t.value)
     return t
 
-t_COMILLASIMPLE = r'\ char(27) '
+t_COMILLASIMPLE = r'\ '' '
 t_COMA = r'\ , '
 t_ABRIRCORCHETE = r'\ [ '
 t_CERRARCORCHETE = r'\ ] '
