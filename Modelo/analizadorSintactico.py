@@ -232,9 +232,18 @@ def p_condicion7(p):
 def p_operadorlogico(p):
     'OPERADORLOGICO: AND'
 
-def p_operadorlogico(p):
+def p_operadorlogico2(p):
     'OPERADORLOGICO: OR'
 
-def p_operadorlogico(p):
+def p_operadorlogico3(p):
     'OPERADORLOGICO: NOT'
 
+def p_empty(p):
+    'EMPTY : '
+    pass
+
+def p_error(p):
+    if(p != None):
+        print("Errror de Sintaxis en la linea " +  str(p.lineno) + " en el token " + str(p.value))
+    else:
+        print("Errror de Sintaxis")

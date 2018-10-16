@@ -77,7 +77,6 @@ keywords = {
     'POWER': 'POWER',
     'LAMBDA': 'LAMBDA',
     'WRITE': 'WRITE',
-
 }
 
 tokens = [
@@ -125,6 +124,11 @@ def t_INT(t):
 def t_DOUBLE(t):
     r'\d+\.\d+'
     t.value = float(t.value)
+    return t
+
+def t_CHAR(t):
+    r'\"(.*)\"'
+    t.value = str(t.value)
     return t
 
 
