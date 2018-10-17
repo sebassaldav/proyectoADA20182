@@ -172,3 +172,63 @@ def t_error(t):
 
 lexer = lex.lex()
 
+data = '''
+    VAR
+        x : [5];
+        y : STACK;
+        m : QUEUE;
+        a : LIST;
+        d : GRAPH;
+        b : INTEGER;
+        c : STRING;
+        e : BOOLEAN;
+        f : DOUBLE;
+    BEGIN
+        e <-- T;
+        x[2] <-- 5;
+        b <-- 0;
+        f <-- 5.0;
+        FOR i <-- 5 TO 10 DO
+        BEGIN
+            WHILE e != F DO
+            BEGIN
+                REPEAT
+                b <-- CEIL(b DIV 5);
+                b <-- FLOOR(b MOD 3);
+                UNTIL (f >= 10)
+            END
+        END
+        IF b = 15 THEN
+            BEGIN
+                WRITELN("FUNCIONOOOO GRACIAS A DIOS , DIOS LO BENDIGA " + LENGHT(x));
+                ADD(a, 5.023);
+                a <-- NULL;
+                #ESTO ES UN HERMOSO COMENTARIO \n
+
+            END
+        ELSE
+            BEGIN
+                WRITELN("NO FUNCIONO, INTENELO DENUEVO CON LA AYUDA DE DIOS ");
+            END
+    END
+
+    '''
+
+lexer.input(data)
+
+
+# while True:
+# tok = lexer.token()
+
+# if not tok:
+#   break
+# print(tok.type, tok.value, tok.lineno, tok.lexpos)
+
+
+# GRACIAS A DIOS FUNCIONO MR BRAYAN !!! DIOS LO BENDIGA Y LO GUARDE
+
+
+
+
+
+

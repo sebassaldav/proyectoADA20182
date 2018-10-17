@@ -252,3 +252,17 @@ def p_error(p):
         print("Errror de Sintaxis en la linea " +  str(p.lineno) + " en el token " + str(p.value))
     else:
         print("Errror de Sintaxis")
+
+
+
+parser = yacc.yacc()
+
+
+while True:
+   try:
+       s = input('')
+   except EOFError:
+       break
+   if not s: continue
+   result = parser.parse(s)
+   print(result)
