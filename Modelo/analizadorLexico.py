@@ -89,7 +89,7 @@ tokens = [
     'ABRIRLLAVE',
     'CERRARLLAVE',
     'ABRIRPARENTESIS',
-    'CERRARPARETENSIS',
+    'CERRARPARENTESIS',
     'GUIONBAJO',
     'SUMA',
     'RESTA',
@@ -134,16 +134,16 @@ def t_CHAR(t):
 
 t_COMILLASIMPLE = r'\ '' '
 t_COMA = r'\ , '
-t_ABRIRCORCHETE = r'\ [ '
-t_CERRARCORCHETE = r'\ ] '
+t_ABRIRCORCHETE = r'\['
+t_CERRARCORCHETE = r'\]'
 t_ABRIRLLAVE = r'\ { '
 t_CERRARLLAVE = r'\ } '
-t_ABRIRPARENTESIS = r'\ ( '
-t_CERRARPARENTESIS = r' \ )'
+t_ABRIRPARENTESIS = r'\('
+t_CERRARPARENTESIS = r'\)'
 t_GUIONBAJO = r'\ _ '
 t_SUMA = r'\ + '
 t_RESTA = r'\ - '
-t_MULTIPLICACION = r'\ * '
+t_MULTIPLICACION = r'\*'
 t_DIVISION = r'\ / '
 t_ELEVADO = r'\ ^ '
 t_ASIGNACION = r'\ <- '
@@ -217,12 +217,12 @@ data = '''
 lexer.input(data)
 
 
-# while True:
-# tok = lexer.token()
+while True:
+    tok = lexer.token()
 
-# if not tok:
-#   break
-# print(tok.type, tok.value, tok.lineno, tok.lexpos)
+    if not tok:
+        break
+    print(tok.type, tok.value, tok.lineno, tok.lexpos)
 
 
 # GRACIAS A DIOS FUNCIONO MR BRAYAN !!! DIOS LO BENDIGA Y LO GUARDE
