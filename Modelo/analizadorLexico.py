@@ -91,6 +91,8 @@ tokens = [
     'ABRIRPARENTESIS',
     'CERRARPARENTESIS',
     'GUIONBAJO',
+    'DOSPUNTOS',
+    'PUNTOCOMA',
     'SUMA',
     'RESTA',
     'MULTIPLICACION',
@@ -133,26 +135,28 @@ def t_CHAR(t):
 
 
 t_COMILLASIMPLE = r'\ '' '
-t_COMA = r'\ , '
+t_COMA = r'\,'
 t_ABRIRCORCHETE = r'\['
 t_CERRARCORCHETE = r'\]'
-t_ABRIRLLAVE = r'\ { '
-t_CERRARLLAVE = r'\ } '
+t_ABRIRLLAVE = r'\{'
+t_CERRARLLAVE = r'\}'
 t_ABRIRPARENTESIS = r'\('
 t_CERRARPARENTESIS = r'\)'
-t_GUIONBAJO = r'\ _ '
-t_SUMA = r'\ + '
-t_RESTA = r'\ - '
+t_GUIONBAJO = r'\_'
+t_DOSPUNTOS = r'\:'
+t_PUNTOCOMA = r'\;'
+t_SUMA = r'\+'
+t_RESTA = r'\-'
 t_MULTIPLICACION = r'\*'
-t_DIVISION = r'\ / '
-t_ELEVADO = r'\ ^ '
-t_ASIGNACION = r'\ <- '
-t_IGUAL = r'\ = '
-t_MENOR = r'\ < '
-t_MAYOR = r'\ > '
-t_MENORIGUAL = r'\ <= '
-t_MAYORIGUAL = r'\ >= '
-t_DIFERENTE = r'\ <> '
+t_DIVISION = r'\/'
+t_ELEVADO = r'\^'
+t_ASIGNACION = r'\<-'
+t_IGUAL = r'\='
+t_MENOR = r'\<'
+t_MAYOR = r'\>'
+t_MENORIGUAL = r'\<='
+t_MAYORIGUAL = r'\>='
+t_DIFERENTE = r'\<>'
 
 
 def t_newline(t):
@@ -184,17 +188,17 @@ data = '''
         e : BOOLEAN;
         f : DOUBLE;
     BEGIN
-        e <-- T;
-        x[2] <-- 5;
-        b <-- 0;
-        f <-- 5.0;
-        FOR i <-- 5 TO 10 DO
+        e <- T;
+        x[2] <- 5;
+        b <- 0;
+        f <- 5.0;
+        FOR i <- 5 TO 10 DO
         BEGIN
-            WHILE e != F DO
+            WHILE e <> F DO
             BEGIN
                 REPEAT
-                b <-- CEIL(b DIV 5);
-                b <-- FLOOR(b MOD 3);
+                b <- CEIL(b DIV 5);
+                b <- FLOOR(b MOD 3);
                 UNTIL (f >= 10)
             END
         END
@@ -202,7 +206,7 @@ data = '''
             BEGIN
                 WRITELN("FUNCIONOOOO GRACIAS A DIOS , DIOS LO BENDIGA " + LENGHT(x));
                 ADD(a, 5.023);
-                a <-- NULL;
+                a <- NULL;
                 #ESTO ES UN HERMOSO COMENTARIO \n
 
             END
