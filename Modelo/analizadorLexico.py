@@ -179,9 +179,9 @@ lexer = lex.lex()
 data = '''
     VAR
         x : [5];
-        y : STACK;
-        m : QUEUE;
-        a : LIST;
+        y : STACKS;
+        m : QUEUES;
+        a : LISTS;
         d : GRAPH;
         b : INTEGER;
         c : STRING;
