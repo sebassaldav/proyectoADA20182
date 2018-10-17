@@ -112,7 +112,7 @@ def t_comentario(t):
 
 def t_nomvariable(t):
     r'[a-zA-Z_][a-zA-Z_0-9]*'
-    t.type = keywords.get(t.value, 'nomvariable') #Si no esta en las palabras reservadas retornamos el ID
+    t.type = keywords.get(t.value, 'NOMVARIABLE') #Si no esta en las palabras reservadas retornamos el ID
     #Sino la palabra reservada
     return t
 
