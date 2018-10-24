@@ -2,6 +2,11 @@ import Modelo.ply.lex as lex
 import sys
 
 keywords = {
+    # MODOPARAMTERO
+    'E': 'E',
+    'S': 'S',
+    'ES': 'ES',
+
     # METODOS PILA
     'PUSHS': 'PUSHS',
     'POPS': 'POPS',
@@ -22,7 +27,9 @@ keywords = {
     'ELSE': 'ELSE',
     'IF': 'IF',
     'ENDIF': 'ENDIF',
-    'CASE': 'CASE',
+    'CASE_OF': 'CASE_OF',
+    'DEFAULT': 'DEFAULT',
+    'ENDCASE': 'ENDCASE',
 
     #ESTRUCTURAS
     'ARBOL': 'ARBOL',
@@ -37,7 +44,7 @@ keywords = {
     'FOR': 'FOR',
     'TO': 'TO',
     'DO': 'DO',
-    'DOWN': 'DOWN',
+    'DOWNTO': 'DOWNTO',
     'INC': 'INC',
     'ENDFOR': 'ENDFOR',
     'FOREACH': 'FOREACH',
@@ -93,6 +100,7 @@ tokens = [
     'CERRARPARENTESIS',
     'GUIONBAJO',
     'DOSPUNTOS',
+    'PUNTO',
     'PUNTOCOMA',
     'SUMA',
     'RESTA',
@@ -113,7 +121,7 @@ def t_comentario(t):
     pass
     # No retornamos nada, porque descartamos el token
 
-def t_nomvariable(t):
+def t_NOMVARIABLE(t):
     r'[a-zA-Z_][a-zA-Z_0-9]*'
     t.type = keywords.get(t.value, 'NOMVARIABLE') #Si no esta en las palabras reservadas retornamos el ID
     #Sino la palabra reservada
@@ -145,6 +153,7 @@ t_ABRIRPARENTESIS = r'\('
 t_CERRARPARENTESIS = r'\)'
 t_GUIONBAJO = r'\_'
 t_DOSPUNTOS = r'\:'
+t_PUNTO = r'\.'
 t_PUNTOCOMA = r'\;'
 t_SUMA = r'\+'
 t_RESTA = r'\-'
@@ -188,6 +197,7 @@ data = '''
         c : STRING;
         e : BOOLEAN;
         f : DOUBLE;
+        WRITELN 1;
     BEGIN
         e <- T;
         x[2] <- 5;
@@ -214,6 +224,7 @@ data = '''
         ELSE
             BEGIN
                 WRITELN("NO FUNCIONO, INTENELO DENUEVO CON LA AYUDA DE DIOS ");
+                WRITELN 4;
             END
     END
 

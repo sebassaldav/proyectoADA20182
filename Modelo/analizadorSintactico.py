@@ -182,7 +182,7 @@ def p_ciclo18(p):
 
 ######################3 CREO QUE NOS ESTAMOS COMPLICANDO, UNA ESTRUCTURA PODRIA SER UN SIMPLE NOMVARIABLE, OSEA EL LLAMADOSUBRUTINA Y LLAMADOSUBRUTINA3 PODRIAN SER UNOO SOLO Y PARA EL FOREACH SERIA NOMVARIABLE Y NO ESTRUCTURA
 def p_llamadosubrutina(p):
-    'LLAMADOSUBRUTINA : NOMVARIABLE NONVARIABLE'
+    'LLAMADOSUBRUTINA : NOMVARIABLE NOMVARIABLE'
 
 def p_llamadosubrutina2(p):
     'LLAMADOSUBRUTINA : NOMVARIABLE NUMERO'
@@ -194,13 +194,13 @@ def p_llamadosubrutina4(p):
     'LLAMADOSUBRUTINA : NOMVARIABLE EMPTY'
 
 def p_write(p):
-    'WRITELN : NOMVARIABLE'
+    'WRITELN : NOMVARIABLE PUNTOCOMA'
 
 def p_write2(p):
-    'WRITELN : NUMERO'
+    'WRITELN : NUMERO PUNTOCOMA'
 
 def p_write3(p):
-    'WRITELN : LLAMADOSUBRUTINA'
+    'WRITELN : LLAMADOSUBRUTINA PUNTOCOMA'
 
 def p_write4(p):
     'WRITELN : EMPTY'
@@ -232,7 +232,6 @@ def p_condicion6(p):
 def p_condicion7(p):
     'CONDICION : LLAMADOSUBRUTINA OPERADORMATEMATICO LLAMADOSUBRUTINA OPERADORLOGICO LLAMADOSUBRUTINA'
 
-##################ESTO NO ESTOY SEGURO, PORQUE ESO YA ESTA DEFINIDO EN LAS KEYWORDS DEL LEXICO
 
 def p_operadorlogico(p):
     'OPERADORLOGICO : AND'
@@ -242,6 +241,60 @@ def p_operadorlogico2(p):
 
 def p_operadorlogico3(p):
     'OPERADORLOGICO : NOT'
+
+def p_tipodato(p):
+    'TIPODATO : INT'
+
+def p_tipodato2(p):
+    'TIPODATO : CHAR'
+
+def p_tipodato3(p):
+    'TIPODATO : DOUBLE'
+
+def p_tipodato4(p):
+    'TIPODATO : BOOLEAN'
+
+def p_operadormatematico(p):
+    'OPERADORMATEMATICO : SUMA '
+
+def p_operadormatematico2(p):
+    'OPERADORMATEMATICO : RESTA'
+
+def p_operadormatematico3(p):
+    'OPERADORMATEMATICO : MULTIPLICACION'
+
+def p_operadormatematico4(p):
+    'OPERADORMATEMATICO : DIVISION'
+
+def p_operadormatematico5(p):
+    'OPERADORMATEMATICO : ELEVADO'
+
+def p_modoparametro(p):
+    'MODOPARAMETRO : E'
+
+def p_modoparametro2(p):
+    'MODOPARAMETRO : S'
+
+def p_modoparametro3(p):
+    'MODOPARAMETRO : ES'
+
+def p_operadorrelacionl(p):
+    'OPERADORRELACIONAL : IGUAL'
+
+def p_operadorrelacionl2(p):
+    'OPERADORRELACIONAL : MENOR'
+
+def p_operadorrelacionl3(p):
+    'OPERADORRELACIONAL : MAYOR'
+
+def p_operadorrelacionl4(p):
+    'OPERADORRELACIONAL : MENORIGUAL'
+
+def p_operadorrelacionl5(p):
+    'OPERADORRELACIONAL : MAYORIGUAL'
+
+def p_operadorrelacionl6(p):
+    'OPERADORRELACIONAL : DIFERENTE'
 
 def p_empty(p):
     'EMPTY : '
