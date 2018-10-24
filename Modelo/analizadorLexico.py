@@ -49,7 +49,7 @@ keywords = {
 
     # SUBRUTINAS
     'PROCEDURE': 'PROCEDURE',
-    'FUNTION': 'FUNTION',
+    'FUNCTION': 'FUNCTION',
     'RETURN': 'RETURN',
 
     # OPERADORES LÓGICOS
@@ -66,6 +66,7 @@ keywords = {
     'CHAR': 'CHAR',
     'DOUBLE': 'DOUBLE',
     'BOOLEAN': 'BOOLEAN',
+
     'BREAK': 'BREAK',
     'FALSE': 'FALSE',
     'TRUE': 'TRUE',
